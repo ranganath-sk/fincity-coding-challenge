@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "bc5a2ca8-4c20-4373-8c80-145f695f3f91",
+		"name": "fincity_challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/cars",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demouser@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"maruti\",\n\t\"manufacturer-name\":\"suzuki\",\n\t\"model\":\"800\",\n\t\"manufacturing-year\":2020\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "Request call with invlid access"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"maruti\",\n\t\"manufacturer-name\":\"suzuki\",\n\t\"model\":\"800\",\n\t\"manufacturing-year\":2020,\n\t\"color\":\"black\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "Unauthorized call"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demoadmin@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"maruti\",\n\t\"manufacturer-name\":\"suzuki\",\n\t\"model\":\"800\",\n\t\"manufacturing-year\":2020\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "Request field validation call"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demoadmin@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"maruti\",\n\t\"manufacturer-name\":\"suzuki\",\n\t\"model\":\"800\",\n\t\"manufacturing-year\":2020,\n\t\"color\":\"black\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "valid call to create car"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demoadmin@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "get all cars details call"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars/6",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demouser@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"6"
+					]
+				},
+				"description": "get car details for specfied id with end user credential"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars/11",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demouser@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"11"
+					]
+				},
+				"description": "request call to handle invalid id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars/6",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demoadmin@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"6"
+					]
+				},
+				"description": "delete specifed id record"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars/9",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demoadmin@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"maruti\",\n\t\"manufacturer-name\":\"suzuki\",\n\t\"model\":\"800\",\n\t\"manufacturing-year\":2020,\n\t\"color\":\"black\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cars/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"9"
+					]
+				},
+				"description": "update car details call"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars/6",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demoadmin@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars",
+						"6"
+					]
+				},
+				"description": "delete call with id value for no record"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cars",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "demoadmin@demo.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "passworD",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cars"
+					]
+				},
+				"description": "handle error response when there no records"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
